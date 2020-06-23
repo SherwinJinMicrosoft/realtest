@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://a">
+    <edmx:DataServices>
+        <Schema Namespace="Exchange" xmlns="http://aa">
+            <EntityType Name="DataEntry"  Abstract="true" OpenType="true" />
+            <EntityType Name="LinkObject" BaseType="Exchange.DataEntry" OpenType="true">
+                <Key>
+                    <PropertyRef Name="qq" />
+                </Key>
+                <Property Name="tyty" Type="Exchange.tyty" />
+            </EntityType>
+            <Function Name="z" IsBound="true">
+                <Parameter Name="zz" Type="Collection(Exchange.LinkObject)" Nullable="false" />
+                <ReturnType Type="Collection(Exchange.DataEntry)" Nullable="false" />
+            </Function>
+            <EnumType Name="qq" UnderlyingType="Edm.Int64">
+                <Member Name="Unknown" Value="0" />
+            </EnumType>
+            <EnumType Name="LinkState" UnderlyingType="Edm.Int64">
+                <Member Name="Unknown" Value="0" />
+            </EnumType>
+            <EnumType Name="MailboxStatus" UnderlyingType="Edm.Int64">
+                <Member Name="PendingCompletion" Value="0" />
+            </EnumType>
+            
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
